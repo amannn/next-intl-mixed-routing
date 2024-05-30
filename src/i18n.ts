@@ -19,7 +19,6 @@ export default getRequestConfig(async (params) => {
 
   if (isAppRoute) {
     const locale = await getLocale();
-    console.log(locale);
 
     return {
       // Return a locale to `next-intl` in case we've read
