@@ -7,12 +7,12 @@ async function getState() {
   return JSON.parse(content);
 }
 
-export async function getLocale() {
+export async function getUserLocale() {
   const state = await getState();
   return state.locale;
 }
 
-export async function setLocale(locale: string) {
+export async function setUserLocale(locale: string) {
   const state = await getState();
   state.locale = locale;
   await fs.writeFile(path, JSON.stringify(state, null, 2));
