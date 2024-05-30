@@ -1,0 +1,25 @@
+{
+  "About": {
+    "title": "About"
+  },
+  "App": {
+    "title": "App home"
+  },
+  "AppNavigation": {
+    "home": "Home",
+    "profile": "Profile"
+  },
+  "Index": {
+    "title": "Home"
+  },
+  "Login": {
+    "label": "→ App"
+  },
+  "PublicNavigation": {
+    "about": "About",
+    "home": "Home"
+  },
+  "Profile": {
+    "title": "Profile"
+  }
+}
