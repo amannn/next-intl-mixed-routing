@@ -2,6 +2,8 @@
 
 import {useRouter} from 'next/navigation';
 import updateLocale from './updateLocale';
+import {useLocale} from 'next-intl';
+import {Locale} from '@/config';
 
 export default function AppNavigationLocaleSwitcher() {
   const router = useRouter();
@@ -10,14 +12,25 @@ export default function AppNavigationLocaleSwitcher() {
     await updateLocale(data);
     router.refresh();
   }
+
   return (
-    <form className="flex gap-3" action={action}>
-      <button name="locale" value="en">
-        EN
-      </button>
-      <button name="locale" value="de">
-        DE
-      </button>
+    <form className="flex gap-3 py-5" action={action}>
+      <LocaleButton locale="en" />
+      <LocaleButton locale="de" />
     </form>
+  );
+}
+
+function LocaleButton({locale}: {locale: Locale}) {
+  const curLocale = useLocale();
+
+  return (
+    <button
+      className={curLocale === locale ? 'underline' : undefined}
+      name="locale"
+      value={locale}
+    >
+      {locale.toUpperCase()}
+    </button>
   );
 }

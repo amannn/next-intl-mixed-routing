@@ -13,7 +13,10 @@
     "title": "Home"
   },
   "Login": {
-    "label": "→ App"
+    "label": "Login →"
+  },
+  "Logout": {
+    "label": "Logout →"
   },
   "PublicNavigation": {
     "about": "About",

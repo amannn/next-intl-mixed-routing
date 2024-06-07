@@ -1,9 +1,10 @@
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
-import PublicNavigation from './PublicNavigation';
-import Document from '@/components/Document';
 import {ReactNode} from 'react';
 import {Metadata} from 'next';
+import PublicNavigation from './PublicNavigation';
+import Document from '@/components/Document';
+import PublicNavigationLocaleSwitcher from './PublicNavigationLocaleSwitcher';
 
 type Props = {
   children: ReactNode;
@@ -26,7 +27,8 @@ export default async function LocaleLayout({
     <Document locale={locale}>
       <NextIntlClientProvider messages={messages}>
         <PublicNavigation />
-        {children}
+        <div className="min-h-[200px] bg-slate-100 p-4 -mx-4">{children}</div>
+        <PublicNavigationLocaleSwitcher />
       </NextIntlClientProvider>
     </Document>
   );

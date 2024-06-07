@@ -13,7 +13,10 @@
     "title": "Start"
   },
   "Login": {
-    "label": "→ App"
+    "label": "Anmelden →"
+  },
+  "Logout": {
+    "label": "Abmelden →"
   },
   "PublicNavigation": {
     "about": "Über uns",
